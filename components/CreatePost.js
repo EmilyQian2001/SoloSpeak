@@ -3,6 +3,7 @@ import React from "react";
 import { HiOutlineVideoCamera } from "react-icons/hi";
 import { IoMdPhotos } from "react-icons/io";
 import { BsEmojiSmile } from "react-icons/bs";
+import Image from "next/image";
 
 const CreatePost = () => {
   const { data: session } = useSession();
