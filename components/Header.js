@@ -6,10 +6,11 @@ import { AiFillMessage, AiFillBell, AiOutlineShop } from "react-icons/ai";
 import { MdOutlineExpandMore, MdOutlineOndemandVideo } from "react-icons/md";
 import { RiFlag2Line } from "react-icons/ri";
 import { IoGameControllerOutline } from "react-icons/io5";
-import { VscSignOut } from "react-icons/vsc";
+import { FaSignOutAlt } from "react-icons/fa";
 import facebookimg from "@/public/Facebook_icon.png";
 import { signOut, useSession } from "next-auth/react";
 const Header = () => {
+  const { data: session } = useSession();
   return (
     <div className="bg-white flex items-center p-2 shadow-md top-0 sticky z-50 h-16">
       {/* Left */}
@@ -52,9 +53,9 @@ const Header = () => {
       </div>
       {/* Right */}
       <div className="flex items-center justify-end min-w-fit space-x-2">
-        <Image src={facebookimg} height={40} width={40} alt="Avatar" />
+        <Image src={session?.user?.image} height={40} width={40} alt="Avatar" className="rounded-full cursor-pointer" />
         <p className="hidden xl:inline-flex font-semibold text-sm whitespace-nowrap p-2 max-w-xs">
-          Emily Qian
+          {session?.user?.name.split(" ")[0]}
         </p>
         <CgMenuGridO
           size={20}
@@ -68,7 +69,7 @@ const Header = () => {
           size={20}
           className=" hidden lg:inline-flex h-10 w-10 bg-gray-200 text-gray-600 rounded-full p-2 cursor-pointer hover:bg-gray-300"
         />
-        <VscSignOut
+        <FaSignOutAlt
           size={20}
           className=" hidden lg:inline-flex h-10 w-10 bg-gray-200 text-gray-600 rounded-full p-2 cursor-pointer hover:bg-gray-300"
           onClick={signOut}
