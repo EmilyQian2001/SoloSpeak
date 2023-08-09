@@ -6,7 +6,7 @@ import { AiFillMessage, AiFillBell, AiOutlineShop } from "react-icons/ai";
 import { MdOutlineExpandMore, MdOutlineOndemandVideo } from "react-icons/md";
 import { RiFlag2Line } from "react-icons/ri";
 import { IoGameControllerOutline } from "react-icons/io5";
-import VscSignOut from "react-icons/vsc";
+import { FaSignOutAlt } from "react-icons/fa";
 import facebookimg from "@/public/Facebook_icon.png";
 import { signOut, useSession } from "next-auth/react";
 const Header = () => {
@@ -75,7 +75,7 @@ const Header = () => {
           size={20}
           className=" hidden lg:inline-flex h-10 w-10 bg-gray-200 text-gray-600 rounded-full p-2 cursor-pointer hover:bg-gray-300"
         />
-        <VscSignOut
+        <FaSignOutAlt
           size={20}
           className=" hidden lg:inline-flex h-10 w-10 bg-gray-200 text-gray-600 rounded-full p-2 cursor-pointer hover:bg-gray-300"
           onClick={signOut}
