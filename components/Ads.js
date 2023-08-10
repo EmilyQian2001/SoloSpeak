@@ -7,8 +7,8 @@ const Ads = ({ src, url }) => {
       <div className="flex items-center space-x-4 py-2 px-2 hover:bg-gray-200 rounded-md">
         <Image
           src={src}
-          height={100}
-          width={100}
+          height={160}
+          width={160}
           className="rounded-md cursor-pointer"
         />
         <p className="text-sm">{new URL(url).hostname}</p>
