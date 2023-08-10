@@ -10,8 +10,12 @@ const Post = () => {
     <div className="flex flex-col">
       <div className="bg-white mt-6 rounded-md p-4">
         <div className="flex items-center space-x-2">
-          post
-          <img src={facebookimg} className="rounded-full w-10 h-10" />
+          <Image
+            src={facebookimg}
+            height={40}
+            width={40}
+            className="rounded-full cursor-pointer"
+          />
           <div>
             <p className="font-medium">Yichun Qian</p>
             <p className="text-xs text-gray-500">
