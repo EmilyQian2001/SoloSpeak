@@ -5,13 +5,14 @@ import { getSession, useSession } from "next-auth/react";
 import Image from "next/image";
 import Head from "next/head";
 import Feed from "@/components/Feed";
+import RightSidebar from "@/components/RightSidebar";
 // import { Inter } from 'next/font/google'
 
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const { data: session } = useSession();
-  if (!session) return <Login />;
+  // if (!session) return <Login />;
   return (
     <>
       <Head>
@@ -23,6 +24,7 @@ export default function Home() {
       <main className="flex bg-gray-100">
         <Sidebar />
         <Feed />
+        <RightSidebar />
       </main>
     </>
   );
