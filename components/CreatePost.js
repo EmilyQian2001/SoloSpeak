@@ -7,7 +7,7 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import Image from "next/image";
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import { addPost } from "@/pages/features/postSlice";
+import { addPost } from "@/redux/features/postSlice";
 
 const CreatePost = () => {
   const FACEBOOK_CLONE_ENDPOINT =
