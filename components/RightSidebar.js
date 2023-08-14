@@ -3,7 +3,7 @@ import Ads from "./Ads";
 
 const RightSidebar = () => {
   return (
-    <div className="hidden lg:inline-flex flex-col pt-4 max-w-xl md:min-w-[200px] lg:min-w-[250px]">
+    <div className="hidden xl:inline-flex flex-col pt-4 max-w-xl md:min-w-[200px] lg:min-w-[250px]">
       <div className="flex items-center">
         <p className="flex text-lg font-semibold flex-grow ">Sponsored</p>
       </div>
