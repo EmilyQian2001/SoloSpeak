@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Post from "./Post";
 import { useDispatch, useSelector } from "react-redux";
 import { addAllPost, selectPost } from "@/redux/features/postSlice";
+import axios from "axios";
 
 const Posts = () => {
   const FACEBOOK_CLONE_ENDPOINT =
