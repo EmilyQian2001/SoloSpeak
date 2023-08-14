@@ -1,5 +1,5 @@
-import { useSession, useRef, useState } from "next-auth/react";
-import React from "react";
+import { useSession } from "next-auth/react";
+import { React, useRef, useState } from "react";
 import { HiOutlineVideoCamera } from "react-icons/hi";
 import { IoMdPhotos } from "react-icons/io";
 import { BsEmojiSmile } from "react-icons/bs";
@@ -20,6 +20,7 @@ const CreatePost = () => {
   const handleClick = () => {
     hiddenFileInput.current.click();
   };
+
   const addImageToPost = (e) => {
     const reader = new FileReader();
     if (e.target.files[0]) {
