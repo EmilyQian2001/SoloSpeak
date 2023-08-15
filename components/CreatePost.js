@@ -10,7 +10,9 @@ import { useDispatch } from "react-redux";
 import { addPost } from "@/redux/features/postSlice";
 
 const CreatePost = () => {
-  const FACEBOOK_CLONE_ENDPOINT = "http://13.114.15.219:8080/api/v1/post";
+  // const FACEBOOK_CLONE_ENDPOINT = "http://13.114.15.219:8080/api/v1/post";
+  const FACEBOOK_CLONE_ENDPOINT =
+    "https://facebook-clone-demo.yichun-qian.com/api/v1/post";
   const { data: session } = useSession();
   const inputRef = useRef(null);
   const hiddenFileInput = useRef(null);
