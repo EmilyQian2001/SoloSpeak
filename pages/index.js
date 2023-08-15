@@ -12,7 +12,7 @@ import RightSidebar from "@/components/RightSidebar";
 
 export default function Home() {
   const { data: session } = useSession();
-  // if (!session) return <Login />;
+  if (!session) return <Login />;
   return (
     <>
       <Head>
