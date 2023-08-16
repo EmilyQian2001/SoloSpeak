@@ -36,6 +36,7 @@ const CreatePost = () => {
   };
   const handleSubmit = () => {
     e.preventDefault();
+    console.log(inputRef.current.value);
     if (!inputRef.current.value) return;
     const formData = new FormData();
     // add key-value pair, and the key is used by backend
@@ -44,7 +45,7 @@ const CreatePost = () => {
     formData.append("name", session?.user?.name);
     formData.append("email", session?.user?.email);
     formData.append("profilePic", session?.user?.image);
-
+    console.log(formData);
     axios
       .post(FACEBOOK_CLONE_ENDPOINT, formData, {
         headers: { Accept: "application/json" },
