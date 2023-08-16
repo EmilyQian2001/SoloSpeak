@@ -16,9 +16,9 @@ const Posts = () => {
       const response = axios.get(FACEBOOK_CLONE_ENDPOINT).then((response) => {
         const currentUser = session?.user?.name; // 获取当前用户的用户名
         console.log(response.data);
-        console.log(response.data[0].payload);
+        console.log(response.data[0]);
         const filteredData = response.data.filter(
-          (action) => action.payload.name === currentUser
+          (action) => action.name === currentUser
         );
         dispatch(addAllPost(filteredData));
       });
