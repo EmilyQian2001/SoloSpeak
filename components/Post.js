@@ -6,6 +6,7 @@ import { FaRegCommentAlt } from "react-icons/fa";
 import { RiShareForwardLine } from "react-icons/ri";
 
 const Post = ({ post }) => {
+  console.log(post);
   return (
     <div className="flex flex-col" key={post.id}>
       <div className="bg-white mt-6 rounded-md p-4">
