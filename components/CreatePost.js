@@ -34,7 +34,7 @@ const CreatePost = () => {
   const removeImage = () => {
     setImageToPost(null);
   };
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log(inputRef.current.value);
     if (!inputRef.current.value) return;
