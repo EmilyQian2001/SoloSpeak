@@ -15,6 +15,8 @@ const Posts = () => {
     const fetchData = () => {
       const response = axios.get(FACEBOOK_CLONE_ENDPOINT).then((response) => {
         const currentUser = session?.user?.name; // 获取当前用户的用户名
+        console.log(response.data);
+        console.log(response.data[0].payload);
         const filteredData = response.data.filter(
           (action) => action.payload.name === currentUser
         );
