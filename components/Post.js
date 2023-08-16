@@ -26,8 +26,10 @@ const Post = ({ post }) => {
       </div>
       {/* If any image */}
       {post.image != null && post.image != "null" && (
-        <div className="relative h-60 md:h-96 bg-white">
-          <Image src={post.image} layout="fill" objectFit="cover" />
+        <div className="relative bg-white">
+          <div className="w-full h-auto">
+            <Image src={post.image} layout="fill" objectFit="cover" />
+          </div>
         </div>
       )}
       {/* Footer */}
