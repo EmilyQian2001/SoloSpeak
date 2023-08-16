@@ -40,6 +40,7 @@ const CreatePost = () => {
     if (!inputRef.current.value) return;
     const formData = new FormData();
     // add key-value pair, and the key is used by backend
+    console.log(imageToPost);
     formData.append("file", imageToPost);
     formData.append("post", inputRef.current.value);
     formData.append("name", session?.user?.name);

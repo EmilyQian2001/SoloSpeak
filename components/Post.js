@@ -25,7 +25,7 @@ const Post = ({ post }) => {
         <p className="py-4">{post.post}</p>
       </div>
       {/* If any image */}
-      {post.image != null && (
+      {post.image != null && post.image != "null" && (
         <div className="relative h-60 md:h-96 bg-white">
           <Image src={post.image} layout="fill" objectFit="cover" />
         </div>
