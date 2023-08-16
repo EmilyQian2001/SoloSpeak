@@ -38,6 +38,10 @@ const CreatePost = () => {
     e.preventDefault();
     console.log(inputRef.current.value);
     if (!inputRef.current.value) return;
+    if (!imageToPost) {
+      // 处理图片未加载的情况
+      console.log("image didn't load");
+    }
     const formData = new FormData();
     // add key-value pair, and the key is used by backend
     console.log(imageToPost);

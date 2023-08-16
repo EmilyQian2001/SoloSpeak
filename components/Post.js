@@ -26,8 +26,8 @@ const Post = ({ post }) => {
       </div>
       {/* If any image */}
       {post.image != null && post.image != "null" && (
-        <div className="relative bg-white">
-          <div className="w-full h-auto">
+        <div className="relative w-80 md:w-96 bg-white">
+          <div className="w-full h-auto relative">
             <Image src={post.image} layout="fill" objectFit="cover" />
           </div>
         </div>
