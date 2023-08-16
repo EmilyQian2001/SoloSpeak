@@ -9,14 +9,14 @@ const Posts = () => {
     "https://facebook-clone-demo.yichun-qian.com/api/v1/post";
   const dispatch = useDispatch();
   const posts = useSelector(selectPost);
-  useEffect(() => {
-    const fetchData = () => {
-      const response = axios.get(FACEBOOK_CLONE_ENDPOINT).then((response) => {
-        dispatch(addAllPost(response.data));
-      });
-    };
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   const fetchData = () => {
+  //     const response = axios.get(FACEBOOK_CLONE_ENDPOINT).then((response) => {
+  //       dispatch(addAllPost(response.data));
+  //     });
+  //   };
+  //   fetchData();
+  // }, []);
   return (
     <div>
       {posts.map((post) => (

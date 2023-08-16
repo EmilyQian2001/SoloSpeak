@@ -7,6 +7,7 @@ export const postSlice = createSlice({
   },
   reducers: {
     addPost: (state, action) => {
+      console.log(action);
       state.value.unshift(action.payload); //add new post at the top
     },
     addAllPost: (state, action) => {
