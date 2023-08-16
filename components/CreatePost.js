@@ -50,6 +50,7 @@ const CreatePost = () => {
     axios
       .post(FACEBOOK_CLONE_ENDPOINT, formData, {
         headers: { Accept: "application/json" },
+        timeout: 30000,
       })
       .then((response) => {
         inputRef.current.value = "";
