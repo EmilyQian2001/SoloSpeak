@@ -10,7 +10,7 @@ export const postSlice = createSlice({
       state.value.unshift(action.payload); //add new post at the top
     },
     addAllPost: (state, action) => {
-      console.log(...action.payload);
+      // console.log(...action.payload);
       state.value.push(...action.payload.reverse());
     },
   },
