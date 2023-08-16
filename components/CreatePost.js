@@ -44,16 +44,19 @@ const CreatePost = () => {
     }
     const formData = new FormData();
     // add key-value pair, and the key is used by backend
-    console.log(imageToPost);
+
     formData.append("file", imageToPost);
     formData.append("post", inputRef.current.value);
     formData.append("name", session?.user?.name);
     formData.append("email", session?.user?.email);
     formData.append("profilePic", session?.user?.image);
-    console.log(formData);
+
     axios
       .post(FACEBOOK_CLONE_ENDPOINT, formData, {
-        headers: { Accept: "application/json" },
+        headers: {
+          Accept: "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
         timeout: 30000,
       })
       .then((response) => {
